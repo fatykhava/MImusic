@@ -29,6 +29,12 @@ function Tabs() {
 
 var connectTabs = new Tabs();
 
+$(document).ready(function () {
+	$('.header__burger').click(function (event) {
+		$('.header__burger, .header__wr-nav').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+});
 
 $(document).ready(function () {
 	$(".slider").slick({
