@@ -1421,6 +1421,12 @@ svg {
   color: #778fc3;
 }
 
+.networks__title {
+  margin-bottom: 30px;
+  font-family: "Barlow-SemiBold";
+  font-size: 26px;
+}
+
 .networks__text {
   padding: 55px 60px 0;
   margin: 0;
@@ -1444,12 +1450,6 @@ svg {
   -ms-grid-row-span: 3;
   grid-row: 1/4;
   padding: 60px;
-}
-
-.youtube__title {
-  margin-bottom: 30px;
-  font-family: "Barlow-SemiBold";
-  font-size: 26px;
 }
 
 .youtube__container {
@@ -1553,12 +1553,6 @@ svg {
   -ms-grid-row-span: 3;
   grid-row: 6/9;
   padding: 60px;
-}
-
-.insta__title {
-  margin-bottom: 30px;
-  font-family: "Barlow-SemiBold";
-  font-size: 26px;
 }
 
 .insta__container {
@@ -1870,6 +1864,7 @@ input {
 }
 
 .footer {
+  width: 100%;
   padding-bottom: 100px;
   background: none;
 }
@@ -2120,9 +2115,6 @@ input {
     margin-bottom: 80px;
   }
   .footer__wr-logo:before {
-    margin-bottom: 50px;
-  }
-  .footer__wr-logo:before {
     top: 8px;
     width: 65px;
     height: 50px;
@@ -2256,6 +2248,11 @@ input {
     margin-bottom: 15px;
     font-size: 12px;
   }
+  .wr-intro {
+    margin-bottom: -1px;
+    height: 100vh;
+    background-attachment: local;
+  }
   .slick-dots {
     display: none;
   }
@@ -2293,5 +2290,246 @@ input {
   .slider__link-text {
     margin-left: 10px;
     font-size: 10px;
+  }
+  .wr-live-dates {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .wr-live-dates__svg-gradient, .wr-live-dates__svg-circle {
+    display: none;
+  }
+  .wr-live-dates__link {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .concert__list {
+    margin-top: 0;
+  }
+  .concert__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .concert__wr-date {
+    margin-right: 0;
+  }
+  .concert__date {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .concert__day {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+  .concert__month {
+    font-size: 14px;
+  }
+  .concert__photo {
+    height: 60px;
+  }
+  .concert__intro {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .concert__title {
+    font-size: 18px;
+  }
+  .concert__subtitle {
+    font-size: 13px;
+  }
+  .concert__button-link, .concert__button-link-sold {
+    width: 150px;
+    padding: 15px 15px;
+    letter-spacing: 2px;
+  }
+  .info {
+    margin-right: 0;
+  }
+  .info__location, .info__timetable {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .location {
+    margin-bottom: 10px;
+  }
+  .location__city {
+    margin: 0 0 0 10px;
+    font-size: 13px;
+  }
+  .timetable__time {
+    margin: 0 0 0 10px;
+    font-size: 13px;
+  }
+  .wr-album {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+  }
+  .wr-album__svg-bigcircle, .wr-album__svg-gradient, .wr-album__svg-circle1, .wr-album__svg-circle2, .wr-album__line {
+    display: none;
+  }
+  .wr-album__subtitle {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+  .album__songs-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .album__songs-container::after, .album__songs-container::before {
+    display: none;
+  }
+  .album__link {
+    margin-bottom: 0;
+  }
+  .song-right::before,
+  .song-left::before {
+    display: none;
+  }
+  .logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .wr-social {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .wr-social__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wr-social__intro {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .wr-social__btn-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wr-social__btn-item {
+    margin-bottom: 10px;
+  }
+  .wr-social__networks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .networks__container {
+    max-width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  .networks__title {
+    font-size: 18px;
+  }
+  .networks__text {
+    padding: 0;
+    margin: 30px 30px 0;
+    font-size: 14px;
+  }
+  .facebook__container,
+  .twitter__container {
+    margin: 15px 30px 0;
+  }
+  .facebook__post-link,
+  .twitter__post-link {
+    padding: 0;
+    margin: 0 30px;
+    font-size: 14px;
+  }
+  .youtube,
+  .insta {
+    padding: 30px;
+  }
+  .wr-blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .wr-blog__container {
+    padding-bottom: 0;
+  }
+  .wr-blog__tabs {
+    display: none;
+  }
+  .spoiler {
+    margin-right: 0;
+  }
+  .wr-form {
+    margin-top: 0;
+  }
+  .wr-form__svg-gradient, .wr-form__svg-circle1, .wr-form__svg-circle2 {
+    display: none;
+  }
+  .wr-form .title {
+    font-size: 30px;
+  }
+  .wr-form .wr-subtitle {
+    font-size: 16px;
+  }
+  input {
+    width: 300px;
+    height: 50px;
+    font-size: 13px;
+  }
+  .form {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .form__btn {
+    width: 300px;
+    height: 60px;
+  }
+  .line {
+    display: none;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
+  .footer__wr-logo {
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+  .footer__logo {
+    left: 30%;
+  }
+  .footer-link {
+    padding: 5px 10px;
   }
 }
