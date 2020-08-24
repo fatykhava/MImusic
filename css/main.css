@@ -1145,6 +1145,26 @@ svg {
   border-radius: 1%;
 }
 
+.play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.play__svg {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+
 .song-left {
   position: relative;
   -ms-grid-row: 3;
@@ -1169,6 +1189,9 @@ svg {
   text-transform: uppercase;
   letter-spacing: -0.48px;
   color: transparent;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .song-left::before {
@@ -1184,8 +1207,21 @@ svg {
   background: linear-gradient(180deg, #6bff7e 0%, #fdd41d 100%);
 }
 
+.song-left:hover .play {
+  z-index: 10;
+}
+
+.song-left:hover .play__svg {
+  opacity: 1;
+}
+
+.song-left:hover .song-left__name {
+  opacity: 0;
+}
+
 .song-top {
   position: relative;
+  z-index: 5;
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   grid-row: 1/5;
@@ -1203,6 +1239,9 @@ svg {
   text-transform: uppercase;
   letter-spacing: -0.48px;
   white-space: pre-line;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .song-top::before {
@@ -1213,6 +1252,9 @@ svg {
   width: 6px;
   height: 285px;
   background-color: #fff;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .song-top::after {
@@ -1223,6 +1265,21 @@ svg {
   width: 7px;
   height: 65px;
   background-color: #fff;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.song-top:hover .play {
+  z-index: 10;
+}
+
+.song-top:hover .play__svg {
+  opacity: 1;
+}
+
+.song-top:hover .song-top__name, .song-top:hover:before, .song-top:hover:after {
+  opacity: 0;
 }
 
 .song-bottom {
@@ -1265,6 +1322,9 @@ svg {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .song-bottom__album-name {
@@ -1278,6 +1338,22 @@ svg {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.song-bottom:hover .play {
+  z-index: 10;
+}
+
+.song-bottom:hover .play__svg {
+  opacity: 1;
+}
+
+.song-bottom:hover .song-bottom__name,
+.song-bottom:hover .song-bottom__album-name {
+  opacity: 0;
 }
 
 .song-right {
@@ -1307,6 +1383,9 @@ svg {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .song-right::before {
@@ -1332,6 +1411,21 @@ svg {
           background-clip: text;
   -webkit-transform: translateX(-50%) rotateX(-180deg);
           transform: translateX(-50%) rotateX(-180deg);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.song-right:hover .play {
+  z-index: 10;
+}
+
+.song-right:hover .play__svg {
+  opacity: 1;
+}
+
+.song-right:hover .song-right__name, .song-right:hover:after {
+  opacity: 0;
 }
 
 .wr-social {
@@ -1899,22 +1993,22 @@ input {
 
 .footer__wr-logo:before {
   top: 10px;
-  left: 31%;
+  left: 40%;
   width: 76px;
   height: 60px;
-  -webkit-transform: translateX(-31%);
-      -ms-transform: translateX(-31%);
-          transform: translateX(-31%);
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 .footer__logo {
   top: 9px;
-  left: 30%;
+  left: 40%;
   font-size: 36px;
   letter-spacing: 9px;
-  -webkit-transform: translateX(-30%);
-      -ms-transform: translateX(-30%);
-          transform: translateX(-30%);
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 .footer-link {
@@ -2254,7 +2348,7 @@ input {
     background-attachment: local;
   }
   .slick-dots {
-    display: none;
+    display: none !important;
   }
   .slider__title {
     height: 15px;

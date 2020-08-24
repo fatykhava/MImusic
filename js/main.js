@@ -64,3 +64,14 @@ $(".spoiler__wr-title").click(function (event) {
 	}
 	$(this).toggleClass("active").next().slideToggle(400);
 });
+
+$('.play').click(function () {
+	var $this = $(this);
+	var id = $this.attr('id').replace(/btn/, '');
+	$this.toggleClass('active');
+	if ($this.hasClass('active')) {
+		$('audio[id^="sound"]')[id - 1].play();
+	} else {
+		$('audio[id^="sound"]')[id - 1].pause();
+	}
+});
