@@ -641,7 +641,7 @@ svg {
 .slider .slick-dots {
   position: absolute;
   bottom: 11%;
-  right: -230px;
+  right: -15%;
 }
 
 .slider .slick-dots li {
@@ -1015,8 +1015,9 @@ svg {
   padding-top: 66vh;
   padding-bottom: 11vh;
   margin-bottom: -20vh;
-  background-image: -o-radial-gradient(circle, rgba(15, 21, 44, 0.8) 0%, #0f152c 100%), url("../img/bg/bg-album.webp");
-  background-image: radial-gradient(circle, rgba(15, 21, 44, 0.8) 0%, #0f152c 100%), url("../img/bg/bg-album.webp");
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #0f152c), color-stop(30%, rgba(15, 21, 44, 0.6)), color-stop(55%, #0f152c)), url("../img/bg/bg-album.webp");
+  background-image: -o-linear-gradient(top, #0f152c 15%, rgba(15, 21, 44, 0.6) 30%, #0f152c 55%), url("../img/bg/bg-album.webp");
+  background-image: linear-gradient(180deg, #0f152c 15%, rgba(15, 21, 44, 0.6) 30%, #0f152c 55%), url("../img/bg/bg-album.webp");
   background-color: #1b2550;
   background-position: top;
   background-repeat: no-repeat;
@@ -1572,8 +1573,8 @@ svg {
   height: 40px;
   margin-right: 15px;
   border-radius: 2px;
-  background: -o-linear-gradient(265deg, #013594 10%, #dc0379 77%, #dbdc03 100%);
-  background: linear-gradient(185deg, #013594 10%, #dc0379 77%, #dbdc03 100%);
+  background: -o-linear-gradient(252deg, #013594 10%, #dc0379 77%, #dbdc03 100%);
+  background: linear-gradient(198deg, #013594 10%, #dc0379 77%, #dbdc03 100%);
 }
 
 .wr-blog {
@@ -1736,9 +1737,9 @@ svg {
 }
 
 .content__date {
+  margin-bottom: 40px;
   font-size: 16px;
   letter-spacing: 3.2px;
-  margin-bottom: 40px;
 }
 
 .content__text {
@@ -1939,6 +1940,211 @@ input {
   fill: #48547c;
 }
 
+@media (max-width: 1700px) {
+  h1 {
+    font-size: 28px;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .header__container {
+    max-width: 1400px;
+    margin-top: 30px;
+  }
+  .navigation__link {
+    font-size: 12px;
+  }
+  .social-network__icon {
+    width: 13px;
+    height: 13px;
+  }
+  .wr-intro {
+    height: 115vh;
+    margin-bottom: -30vh;
+  }
+  .slider {
+    padding-top: 35vh;
+  }
+  .slider .slick-dots {
+    bottom: 5%;
+    right: -40px;
+  }
+  .slider__title {
+    width: 500px;
+    height: 35px;
+    font-size: 28px;
+    letter-spacing: 7px;
+  }
+  .slider__subtitle {
+    font-size: 70px;
+  }
+  .slider__paragraph {
+    font-size: 28px;
+  }
+  .slider__button-link {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+  .slider__link-text {
+    font-size: 16px;
+  }
+  .slider__svg {
+    width: 60px;
+    height: 60px;
+  }
+  .slider__circle {
+    width: 66px;
+    height: 66px;
+  }
+  .wr-live-dates__svg-circle {
+    top: 50%;
+    left: 3%;
+  }
+  .concert__list {
+    margin-top: 95px;
+  }
+  .wr-album {
+    padding-top: 61vh;
+    margin-bottom: -25vh;
+  }
+  .wr-album .title {
+    margin-bottom: 25px;
+  }
+  .wr-album__svg-bigcircle {
+    top: -19%;
+    height: 500px;
+  }
+  .wr-album__svg-gradient {
+    height: 200px;
+  }
+  .wr-album__subtitle {
+    margin-bottom: 70px;
+  }
+  .album__songs-container {
+    width: 80%;
+    -ms-grid-rows: (70px)[8];
+    grid-template-rows: repeat(8, 70px);
+    row-gap: 25px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .album__songs-container::before {
+    right: 60px;
+  }
+  .album__songs-container::after {
+    bottom: -50px;
+    left: 160px;
+  }
+  .album .song-left__name {
+    font-size: 56px;
+  }
+  .album .song-left::before {
+    bottom: -210px;
+    right: 25px;
+    width: 150px;
+    height: 150px;
+  }
+  .album .song-top::before {
+    height: 240px;
+  }
+  .album .song-right__name {
+    font-size: 56px;
+  }
+  .album .song-right::before {
+    top: -150px;
+    left: 30px;
+    width: 105px;
+    height: 105px;
+  }
+  .spoiler__title {
+    height: 70px;
+    padding: 20px 20px 20px 55px;
+    font-size: 18px;
+  }
+  .spoiler__link {
+    height: 70px;
+    padding: 20px 20px 20px 55px;
+    font-size: 16px;
+  }
+  .spoiler__link::before {
+    top: 60%;
+    left: 45%;
+  }
+  .spoiler__link::after {
+    top: 34px;
+    left: 42.5%;
+    height: 1px;
+  }
+  .blog {
+    padding: 30px 50px;
+  }
+  .blog::before {
+    left: -5px;
+    width: 5px;
+  }
+  .blog__title {
+    font-size: 20px;
+  }
+  .blog__date {
+    font-size: 10px;
+  }
+  .blog__text {
+    font-size: 14px;
+  }
+  .content__title {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+  .content__date {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .content__text {
+    font-size: 16px;
+  }
+  .wr-form .title {
+    font-size: 40px;
+  }
+  .wr-form .wr-subtitle {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+  input {
+    width: 400px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .form {
+    margin-bottom: 80px;
+  }
+  .footer__wr-logo:before {
+    margin-bottom: 50px;
+  }
+  .footer__wr-logo:before {
+    top: 8px;
+    width: 65px;
+    height: 50px;
+    -webkit-transform: translateX(-31%);
+        -ms-transform: translateX(-31%);
+            transform: translateX(-31%);
+  }
+  .footer__logo {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .social-network__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .navigation-link {
+    padding: 5px;
+  }
+}
+
 @media (max-width: 999px) {
   body.lock {
     overflow: hidden;
@@ -2038,130 +2244,54 @@ input {
   }
 }
 
-@media (max-width: 1700px) {
-  h1 {
-    font-size: 28px;
-  }
-  .title {
-    font-size: 48px;
-  }
+@media (max-width: 500px) {
   .header__container {
-    max-width: 1400px;
-    margin-top: 30px;
+    margin-top: 0px;
   }
-  .navigation__link {
+  .header__logo {
+    font-size: 18px;
+  }
+  h1 {
+    margin-left: 7px;
+    margin-bottom: 15px;
     font-size: 12px;
   }
-  .social-network__icon {
-    width: 13px;
-    height: 13px;
-  }
-  .wr-intro {
-    margin-bottom: -30vh;
-  }
-  .slider {
-    padding-top: 35vh;
-  }
-  .slider .slick-dots {
-    bottom: 5%;
-    right: -40px;
+  .slick-dots {
+    display: none;
   }
   .slider__title {
-    width: 500px;
-    height: 35px;
-    font-size: 28px;
-    letter-spacing: 7px;
+    height: 15px;
+    width: 60%;
+    padding: 0 0 0 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    line-height: 1.5;
   }
   .slider__subtitle {
-    font-size: 70px;
+    margin-left: 7px;
+    margin-bottom: 5px;
+    font-size: 30px;
   }
   .slider__paragraph {
-    font-size: 28px;
+    margin-left: 7px;
+    margin-bottom: 15px;
+    font-size: 12px;
   }
   .slider__button-link {
-    padding: 15px 40px;
-    font-size: 16px;
-  }
-  .slider__link-text {
-    font-size: 16px;
+    padding: 10px 10px;
+    margin-right: 20px;
+    font-size: 10px;
   }
   .slider__svg {
-    width: 60px;
-    height: 60px;
+    width: 35px;
   }
   .slider__circle {
-    width: 66px;
-    height: 66px;
+    width: 40px;
+    height: 40px;
   }
-  .wr-live-dates__svg-circle {
-    top: 50%;
-    left: 3%;
-  }
-  .concert__list {
-    margin-top: 95px;
-  }
-  .wr-album {
-    padding-top: 61vh;
-    margin-bottom: -22vh;
-  }
-  .wr-album .title {
-    margin-bottom: 25px;
-  }
-  .wr-album__svg-bigcircle {
-    top: -19%;
-    height: 500px;
-  }
-  .wr-album__svg-gradient {
-    height: 200px;
-  }
-  .wr-album__subtitle {
-    margin-bottom: 70px;
-  }
-  .album__songs-container {
-    width: 80%;
-    -ms-grid-rows: (70px)[8];
-    grid-template-rows: repeat(8, 70px);
-    row-gap: 25px;
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
-  }
-  .album__songs-container::before {
-    right: 60px;
-  }
-  .album__songs-container::after {
-    bottom: -50px;
-    left: 160px;
-  }
-  .album .song-left__name {
-    font-size: 56px;
-  }
-  .album .song-left::before {
-    bottom: -210px;
-    right: 25px;
-    width: 150px;
-    height: 150px;
-  }
-  .album .song-top::before {
-    height: 240px;
-  }
-  .album .song-right__name {
-    font-size: 56px;
-  }
-  .album .song-right::before {
-    top: -150px;
-    left: 30px;
-    width: 105px;
-    height: 105px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .social-network__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .navigation-link {
-    padding: 5px;
+  .slider__link-text {
+    margin-left: 10px;
+    font-size: 10px;
   }
 }

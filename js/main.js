@@ -46,8 +46,16 @@ $(document).ready(function () {
 		autoplaySpeed: 10000,
 		waitForAnimate: true,
 		fade: true,
+		responsive: [
+			{
+				breakpoint: 500,
+				settings: {
+					dots: false,
+				}
+			}],
 	})
 });
+
 
 $(".spoiler__wr-title").click(function (event) {
 	if ($(".wr-blog__spoiler").hasClass("accordion")) {
