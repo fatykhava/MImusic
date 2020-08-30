@@ -547,6 +547,11 @@ svg {
   display: none;
 }
 
+.header-fixed {
+  position: fixed;
+  background-color: rgba(19, 27, 59, 0.9);
+}
+
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2534,8 +2539,8 @@ input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0;
     padding: 15px 15px;
+    margin: 0;
   }
   .header__wr-nav {
     position: fixed;
@@ -2674,8 +2679,8 @@ input {
     font-size: 14px;
   }
   .content__description {
-    font-size: 16px;
     margin-bottom: 15px;
+    font-size: 16px;
   }
   .content__title {
     padding-bottom: 20px;
@@ -2683,8 +2688,8 @@ input {
     font-size: 30px;
   }
   .content__date {
-    font-size: 12px;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   .content__text {
     font-size: 14px;
@@ -3003,8 +3008,8 @@ input {
   }
   .slider__title {
     width: 90%;
-    margin: 0 auto 10px;
     padding-left: 0;
+    margin: 0 auto 10px;
   }
   .slider p {
     text-align: center;
@@ -3159,6 +3164,10 @@ input {
     margin-bottom: 0;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 21, 44, 0.5)), to(#0f152c)), url("../img/bg/bg-live.webp");
+    background-image: -o-linear-gradient(rgba(15, 21, 44, 0.5), #0f152c), url("../img/bg/bg-live.webp");
+    background-image: linear-gradient(rgba(15, 21, 44, 0.5), #0f152c), url("../img/bg/bg-live.webp");
+    background-position: 70% 0;
   }
   .wr-live-dates__svg-gradient, .wr-live-dates__svg-circle {
     display: none;
@@ -3218,6 +3227,9 @@ input {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 21, 44, 0.7)), to(rgba(15, 21, 44, 0.7))), url("../img/bg/bg-album.webp");
+    background-image: -o-linear-gradient(top, rgba(15, 21, 44, 0.7), rgba(15, 21, 44, 0.7)), url("../img/bg/bg-album.webp");
+    background-image: linear-gradient(180deg, rgba(15, 21, 44, 0.7), rgba(15, 21, 44, 0.7)), url("../img/bg/bg-album.webp");
   }
   .wr-album__svg-bigcircle, .wr-album__svg-gradient, .wr-album__svg-circle1, .wr-album__svg-circle2, .wr-album__line {
     display: none;
@@ -3235,6 +3247,7 @@ input {
     margin-bottom: 0;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    background-position: left;
   }
   .networks__container {
     width: 90%;
@@ -3286,6 +3299,7 @@ input {
     display: none;
   }
   .footer {
+    padding-bottom: 50px;
     margin-top: -10vh;
   }
   .footer__logo {
