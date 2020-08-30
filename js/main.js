@@ -32,6 +32,21 @@ btnBurger.addEventListener('click', function () {
 	body.classList.toggle('lock');
 });
 
+// fixed header 
+
+let header = document.querySelector('.header');
+
+if (header) {
+	window.onscroll = function () {
+		if (document.documentElement.scrollTop > 590) {
+			header.classList.add("header-fixed");
+		}
+		else {
+			header.classList.remove("header-fixed");
+		}
+	}
+}
+
 // section album
 
 // включение музыки
