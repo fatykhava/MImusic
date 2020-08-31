@@ -1,3 +1,7 @@
+window.onload = function () {
+	document.body.classList.add('loaded');
+}
+
 // slider main-page
 
 $(document).ready(function () {
@@ -74,50 +78,39 @@ for (let i = 0; i < musicList.length; i++) {
 
 //сортировка соц.сетей	
 
-filterSelection("all")
-function filterSelection(c) {
-	let x, i;
-	x = document.getElementsByClassName("networks__container");
-	if (c == "all") c = "";
-	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-	for (i = 0; i < x.length; i++) {
-		w3RemoveClass(x[i], "show");
-		if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-	}
-}
+let listSort = document.querySelector('.wr-social__btn-list');
+let btnSort = document.querySelectorAll('.wr-social__btn');
+let postSort = document.querySelectorAll('.networks__container')
 
-// Show filtered elements
-function w3AddClass(element, name) {
-	let i, arr1, arr2;
-	arr1 = element.className.split(" ");
-	arr2 = name.split(" ");
-	for (i = 0; i < arr2.length; i++) {
-		if (arr1.indexOf(arr2[i]) == -1) {
-			element.className += " " + arr2[i];
+listSort.addEventListener('click', function () {
+	let target = event.target;
+
+	if (target.tagName != 'BUTTON') return;
+	showPost(target);
+})
+
+function showPost(target) {
+	let id = target.getAttribute('id').replace(/btn-/, '');
+	let post = document.querySelector(`.${id}`);
+
+	for (let i = 0; i < postSort.length; i++) {
+		postSort[i].classList.remove('disabled');
+	}
+
+	if (target.classList.contains('active')) return;
+
+	for (let i = 0; i < btnSort.length; i++) {
+		btnSort[i].classList.remove('active');
+	}
+	target.classList.add('active');
+
+	if (target.classList.contains('all')) return;
+
+	for (let i = 0; i < postSort.length; i++) {
+		if (post != postSort[i]) {
+			postSort[i].classList.add('disabled');
 		}
 	}
-}
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-	let i, arr1, arr2;
-	arr1 = element.className.split(" ");
-	arr2 = name.split(" ");
-	for (i = 0; i < arr2.length; i++) {
-		while (arr1.indexOf(arr2[i]) > -1) {
-			arr1.splice(arr1.indexOf(arr2[i]), 1);
-		}
-	}
-	element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-let btns = document.getElementsByClassName("wr-social__btn");
-for (let i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function () {
-		let current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace(" active", "");
-		btns[i].className += " active";
-	});
 };
 
 //
@@ -149,7 +142,7 @@ function Tabs() {
 	bindAll();
 }
 
-var connectTabs = new Tabs();
+let connectTabs = new Tabs();
 
 //аккордион
 
@@ -159,4 +152,17 @@ $(".spoiler__wr-title").click(function (event) {
 		$(".spoiler__text").not($(this).next()).slideUp(500);
 	}
 	$(this).toggleClass("active").next().slideToggle(500);
+});
+
+// валидация формы
+let inputList = document.querySelectorAll('input');
+let btnSubmit = document.querySelector('.form__btn');
+
+btnSubmit.addEventListener('click', function () {
+	for (let i = 0; i < inputList.length; i++) {
+		inputList[i].classList.remove('error');
+		if (!inputList[i].value) {
+			inputList[i].classList.add('error')
+		}
+	}
 });

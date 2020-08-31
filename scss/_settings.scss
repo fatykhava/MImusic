@@ -1,0 +1,138 @@
+body {
+	overflow-x: hidden;
+
+	font-family: "Barlow-Bold";
+	color: $main-font;
+	background-color: $dark-blue;
+}
+
+h1 {
+	padding: 0;
+	margin: 0 0 40px;
+
+	font-family: "Barlow-Medium";
+	font-size: 36px;
+}
+
+h2 {
+	display: inline-block;
+	padding: 0 0 25px;
+	margin: 0;
+
+	font-family: "Barlow-SemiBold";
+	font-size: 60px;
+}
+
+.title {
+	margin-bottom: 25px;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 5px;
+	
+		display: block;
+		width: 146px;
+		height: 4px;
+	
+		background: linear-gradient(
+			90deg,
+			rgba(51, 203, 204, 1) 86%,
+			rgba(3, 44, 158, 1) 86%,
+			rgba(3, 44, 158, 1) 93%,
+			rgba(106, 255, 127, 1) 93%
+		);
+	}
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+
+	font-family: "Barlow-Bold";
+	text-transform: uppercase;
+	color: $main-font;
+}
+
+a {
+	text-decoration: none;
+	color: $main-font;
+}
+
+a:hover {
+	text-decoration: none;
+	color: $main-font;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+svg {
+	fill: $main-font;
+}
+
+.container {
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.button-link {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 5px;
+	border: solid 2px $main-font;
+}
+
+.wr-subtitle {
+	margin-bottom: 75px;
+
+	font-family: "Roboto-Light";
+	font-size: 20px;
+	text-align: center;
+	color: $blue-font;
+}
+
+.logo {
+	position: relative;
+	z-index: 5;
+
+	margin-bottom: 20px;
+
+	font-size: 24px;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	text-align: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -7%;
+		z-index: -1;
+	
+		width: 50px;
+		height: 40px;
+	
+		background-color: $blue;
+	}
+}
+
+.line {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	width: 100%;
+}

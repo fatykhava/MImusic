@@ -1,0 +1,217 @@
+.wr-social {
+	position: relative;
+
+	padding-top: 50vh;
+	padding-bottom: 38vh;
+	margin-bottom: -23vh;
+
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+	background-image: url("../img/bg/bg-social.webp");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $dark-blue;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__intro {
+		padding-top: 105px;
+	}
+
+	&__title {
+		margin-bottom: 33px;
+
+		white-space: pre-line;
+		line-height: 1.3;
+	}
+
+	&__title-line {
+		margin-bottom: 35px;
+	}
+
+	&__btn-item {
+		margin-bottom: 33px;
+	}
+
+	&__btn {
+		padding: 5px;
+
+		font-size: 14px;
+		letter-spacing: 2.8px;
+		text-shadow: 0 0 2px #fff;
+	}
+
+	&__btn.active {
+		color: $red;
+		text-shadow: 0 0 10px #000;
+	}
+}
+
+.networks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(8, 87px);
+	grid-gap: 33px;
+
+	&__container {
+		width: 370px;
+
+		box-shadow: 0 0 15px #000;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 4px;
+
+		&.disabled {
+			pointer-events: none;
+			opacity: .8;
+			backdrop-filter: blur(8px);
+			filter: blur(2px);
+		}
+	}
+
+	&__link-name {
+		margin: 0;
+		padding: 0;
+
+		font-size: 16px;
+		letter-spacing: 1.6px;
+		line-height: 20px;
+	}
+
+	&__link-date {
+		margin: 0;
+		padding: 0;
+
+		font-family: "Roboto-Regular";
+		font-size: 16px;
+		line-height: 20px;
+		color: $blue-font;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		font-family: "Barlow-SemiBold";
+		font-size: 26px;
+	}
+
+	&__text {
+		padding: 55px 60px 0;
+		margin: 0;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		line-height: 1.67;
+		white-space: pre-line;
+	}
+
+	&__svg {
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+	}
+
+	&__link {
+		display: flex;
+		width: 100%;
+		height: 40px;
+	}
+
+	&__link-svg {
+		width: 40px;
+		margin-right: 20px;
+
+		border-radius: 2px;
+	}
+}
+
+.youtube {
+	grid-column: 1/2;
+	grid-row: 1/4;
+
+	padding: 60px;
+
+	&__container {
+		display: flex;
+	}
+
+	&__link-svg {
+		background-color: $red;
+	}
+}
+
+.twitter {
+	grid-column: 2/3;
+	grid-row: 2/6;
+
+	&__img {
+		width: 100%;
+		max-height: 100px;
+
+		object-fit: cover;
+	}
+
+	&__post-link {
+		padding: 0 60px;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		color: $green;
+	}
+
+	&__container {
+		display: flex;
+		margin: 25px 60px 60px;
+	}
+
+	&__link-svg {
+		background-color: $title-line;
+	}
+}
+
+.facebook {
+	grid-column: 1/2;
+	grid-row: 4/8;
+
+	&__img {
+		width: 100%;
+		max-height: 100px;
+
+		object-fit: cover;
+	}
+
+	&__post-link {
+		padding: 0 60px;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		color: $green;
+	}
+
+	&__container {
+		display: flex;
+		margin: 25px 60px 60px;
+	}
+
+	&__link-svg {
+		background-color: $blue;
+	}
+}
+
+.insta {
+	grid-column: 2/3;
+	grid-row: 6/9;
+
+	padding: 60px;
+
+	&__container {
+		display: flex;
+	}
+
+	&__link-svg {
+		background: linear-gradient(198deg, rgba(1, 53, 148, 1) 10%, rgba(220, 3, 121, 1) 77%, rgba(219, 220, 3, 1) 100%);
+	}
+}
