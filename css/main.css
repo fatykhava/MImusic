@@ -2866,7 +2866,7 @@ input:invalid {
   }
   .header__wr-nav {
     position: fixed;
-    top: -100vh;
+    top: -150vh;
     left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3682,5 +3682,15 @@ input:invalid {
     padding-right: 10px;
     font-size: 13px;
     letter-spacing: normal;
+  }
+}
+
+@media (max-height: 750px) {
+  .wr-intro {
+    padding-top: 200px;
+    height: 750px;
+  }
+  .footer {
+    margin-top: -75px;
   }
 }
