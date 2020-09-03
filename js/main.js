@@ -29,12 +29,22 @@ $(document).ready(function () {
 let btnBurger = document.querySelector('.header__burger');
 let burgerNav = document.querySelector('.header__wr-nav');
 let body = document.querySelector('body');
+let navLink = document.querySelectorAll('.navigation__link');
 
 btnBurger.addEventListener('click', function () {
 	btnBurger.classList.toggle('active');
 	burgerNav.classList.toggle('active');
 	body.classList.toggle('lock');
 });
+
+for (let i = 0; i < navLink.length; i++) {
+	navLink[i].addEventListener('click', function () {
+		btnBurger.classList.remove('active');
+		burgerNav.classList.remove('active');
+		body.classList.remove('lock');
+	})
+};
+
 
 // fixed header 
 
@@ -55,6 +65,8 @@ if (header) {
 
 // включение музыки
 
+let musicList = document.querySelectorAll('.play');
+
 let playSong = function () {
 	this.classList.toggle('start');
 	let parent = this.parentNode;
@@ -69,9 +81,27 @@ let playSong = function () {
 	} else {
 		sound.pause();
 	}
+
+	for (let i = 0; i < musicList.length; i++) {
+		if (musicList[i] != this) {
+			musicList[i].classList.remove('start');
+
+			let parentOff = musicList[i].parentNode;
+			parentOff.classList.remove('play-song');
+
+			let idOff = musicList[i].getAttribute('id').replace(/btn/, '');
+
+			let soundOff = document.querySelector(`#sound${idOff}`);
+
+			if (musicList[i].classList.contains('start')) {
+				soundOff.play();
+			} else {
+				soundOff.pause();
+			}
+		}
+	}
 };
 
-let musicList = document.querySelectorAll('.play');
 for (let i = 0; i < musicList.length; i++) {
 	musicList[i].addEventListener('click', playSong)
 };
@@ -149,9 +179,9 @@ let connectTabs = new Tabs();
 $(".spoiler__wr-title").click(function (event) {
 	if ($(".wr-blog__spoiler").hasClass("accordion")) {
 		$(".spoiler__wr-title").not($(this)).removeClass("active");
-		$(".spoiler__text").not($(this).next()).slideUp(500);
+		$(".spoiler__text").not($(this).next()).slideUp(700);
 	}
-	$(this).toggleClass("active").next().slideToggle(500);
+	$(this).toggleClass("active").next().slideToggle(700);
 });
 
 // валидация формы
