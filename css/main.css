@@ -2866,7 +2866,7 @@ input:invalid {
   }
   .header__wr-nav {
     position: fixed;
-    top: -200%;
+    top: -100vh;
     left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
