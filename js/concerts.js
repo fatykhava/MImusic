@@ -3,7 +3,6 @@ window.onload = function () {
 }
 
 //сортировка концертов
-debugger
 let listSort = document.querySelector('.concert__btn-list');
 let btnSort = document.querySelectorAll('.concert__btn');
 let itemSort = document.querySelectorAll('.concert__item')

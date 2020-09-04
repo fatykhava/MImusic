@@ -2445,8 +2445,8 @@ input:invalid {
 .concert {
   padding-top: 115px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("../img/bg/bg-home1.jpg") no-repeat center;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000 20%), url("../img/bg/bg-home1.jpg") no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000 20%), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000), url("../img/bg/bg-home1.jpg") no-repeat center;
   background-attachment: fixed;
 }
 
@@ -2504,15 +2504,15 @@ input:invalid {
   display: none;
 }
 
-.concert__wr-form {
+.concert-logo {
+  margin-bottom: 40px;
+}
+
+.wr-form.concerts {
   padding-top: 100px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(#0f152c)), url("../img/bg/bg-form.webp");
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
-}
-
-.concert-logo {
-  margin-bottom: 40px;
 }
 
 .header__title {
@@ -2524,6 +2524,91 @@ input:invalid {
 
 .header__title:before {
   display: none;
+}
+
+.blog-page {
+  padding-top: 115px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000)), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0), #000), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0), #000), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blog-page__container {
+  max-width: 991px;
+}
+
+.blog-page__wr-img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.blog-page__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+}
+
+.blog-page__title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1b2550;
+  text-shadow: 0 0 5px #fff;
+}
+
+.blog-page__writer {
+  padding: 0;
+  margin-bottom: 20px;
+  color: #000;
+  letter-spacing: 3px;
+  text-shadow: 0 0 1px #000;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.blog-page__text {
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  color: #000;
+  font-family: "Roboto-Regular";
+  text-shadow: 0 0 5px #1b2550;
+  text-align: justify;
+}
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 0 0 15px #000;
+          box-shadow: 0 0 15px #000;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.wr-form.blog-form {
+  padding-top: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(#0f152c)), url("../img/bg/bg-form.webp");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
 }
 
 @media (max-width: 1800px) {
@@ -3804,10 +3889,29 @@ input:invalid {
   .concert .wr-live-dates__container {
     padding-bottom: 100px;
   }
-  .concert .wr-form__container {
+  .wr-form.concerts,
+  .wr-form.blog-form {
     padding-top: 0;
+  }
+  .blog-footer,
+  .concerts-footer {
+    margin-top: -150px;
   }
   .header__title {
     font-size: 18px;
+  }
+  .blog-page__wr-img {
+    width: 200px;
+    height: 200px;
+  }
+  .blog-page__title {
+    font-size: 18px;
+  }
+  .blog-page__writer {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .blog-page__text {
+    font-size: 13px;
   }
 }
