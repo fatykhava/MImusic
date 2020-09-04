@@ -2436,6 +2436,96 @@ input:invalid {
   fill: #48547c;
 }
 
+.concert-header {
+  position: fixed;
+  height: 80px;
+  background-color: rgba(27, 37, 80, 0.8);
+}
+
+.concert {
+  padding-top: 115px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000 20%), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.9) #000 20%), url("../img/bg/bg-home1.jpg") no-repeat center;
+  background-attachment: fixed;
+}
+
+.concert .wr-live-dates__container {
+  padding-bottom: 150px;
+}
+
+.concert__btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.concert__btn-item {
+  margin: 0 50px;
+}
+
+.concert__btn {
+  padding: 10px;
+  font-size: 26px;
+  color: #fb516e;
+  opacity: 0.6;
+}
+
+.concert__btn:hover {
+  opacity: 1;
+}
+
+.concert__btn:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.concert__btn.active {
+  opacity: 1;
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.concert__item:last-child {
+  margin: 0;
+}
+
+.concert__item.disabled {
+  display: none;
+}
+
+.concert__wr-form {
+  padding-top: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(#0f152c)), url("../img/bg/bg-form.webp");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0f152c), url("../img/bg/bg-form.webp");
+}
+
+.concert-logo {
+  margin-bottom: 40px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__title:before {
+  display: none;
+}
+
 @media (max-width: 1800px) {
   .slider .slick-dots {
     right: -20%;
@@ -2633,6 +2723,9 @@ input:invalid {
   .footer__logo:before {
     width: 65px;
     height: 55px;
+  }
+  .header__title {
+    font-size: 36px;
   }
 }
 
@@ -3192,7 +3285,6 @@ input:invalid {
     margin: 25px 45px 40px;
   }
   .wr-form {
-    padding-bottom: 35vh;
     background-position: left;
   }
 }
@@ -3245,6 +3337,15 @@ input:invalid {
   .tabs {
     display: none;
   }
+  .concert__btn-item {
+    margin: 0 30px;
+  }
+  .concert__btn {
+    font-size: 24px;
+  }
+  .header__title {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 699px) {
@@ -3287,8 +3388,8 @@ input:invalid {
     margin-bottom: 10px;
   }
   .concert__button-link, .concert__button-link-sold {
-    width: 200px;
-    margin-right: 5vw;
+    width: 220px;
+    margin-right: 2vw;
     letter-spacing: 3px;
   }
   .mobile-off {
@@ -3296,6 +3397,8 @@ input:invalid {
   }
   .sold {
     margin-bottom: 30px;
+  }
+  .wr-intro .sold {
     border-bottom: none;
   }
   .wr-album__svg-bigcircle {
@@ -3367,6 +3470,13 @@ input:invalid {
   }
   .wr-form__title {
     margin-bottom: 30px;
+  }
+  .concert__btn-item {
+    margin: 0 20px;
+  }
+  .header__title {
+    margin-bottom: 0;
+    font-size: 26px;
   }
 }
 
@@ -3640,7 +3750,7 @@ input:invalid {
     font-size: 14px;
   }
   .wr-form {
-    padding-bottom: 25vh;
+    padding-bottom: 250px;
     margin-top: 0;
   }
   .wr-form__svg-gradient, .wr-form__svg-circle1, .wr-form__svg-circle2 {
@@ -3671,7 +3781,7 @@ input:invalid {
   }
   .footer {
     padding-bottom: 50px;
-    margin-top: -10vh;
+    margin-top: -100px;
   }
   .footer__logo {
     margin-bottom: 60px;
@@ -3684,5 +3794,20 @@ input:invalid {
     padding-right: 10px;
     font-size: 13px;
     letter-spacing: normal;
+  }
+  .concert__btn-item {
+    margin: 0 15px;
+  }
+  .concert__btn {
+    padding: 5px;
+  }
+  .concert .wr-live-dates__container {
+    padding-bottom: 100px;
+  }
+  .concert .wr-form__container {
+    padding-top: 0;
+  }
+  .header__title {
+    font-size: 18px;
   }
 }
