@@ -2,6 +2,17 @@ window.onload = function () {
 	document.body.classList.add('loaded');
 }
 
+//плавный скролл header
+
+$(document).ready(function () {
+	$("#menu").on("click", "a", function (event) {
+		event.preventDefault();
+		let id = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({ scrollTop: top}, 1500);
+	});
+});
+
 //активное меню при скролле
 
 let sections = $('section')
