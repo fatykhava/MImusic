@@ -1,0 +1,286 @@
+.wr-social {
+	position: relative;
+
+	padding-top: 530px;
+	padding-bottom: 450px;
+	margin-bottom: -300px;
+
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+	background-image: url("../img/bg/bg-social.webp");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $dark-blue;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__intro {
+		padding-top: 115px;
+	}
+
+	&__title {
+		margin-bottom: 33px;
+
+		white-space: pre-line;
+		line-height: 1.3;
+	}
+
+	&__title-line {
+		margin-bottom: 35px;
+	}
+
+	&__btn-item {
+		margin-bottom: 33px;
+	}
+
+	&__btn {
+		padding: 5px;
+
+		font-size: 14px;
+		letter-spacing: 2.8px;
+
+		&:hover {
+			text-shadow: 0 0 5px $main-font;
+		}
+
+		&:focus {
+			outline: none;
+			text-shadow: 0 0 5px $main-font;
+			filter: contrast(2);
+		}
+	}
+
+	&__btn.active {
+		color: $red;
+		text-shadow: 0 0 10px $black;
+
+		&:hover {
+			filter: contrast(4);
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.networks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(8, 1fr);
+	grid-gap: 33px;
+
+	&__container {
+		width: 370px;
+
+		box-shadow: 0 0 15px #000;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 4px;
+
+		&.disabled {
+			pointer-events: none;
+			opacity: .8;
+			backdrop-filter: blur(8px);
+			filter: blur(2px);
+		}
+	}
+
+	&__link-name {
+		margin: 0;
+		padding: 0;
+
+		font-size: 16px;
+		letter-spacing: 1.6px;
+		line-height: 20px;
+		transition: 1s;
+	}
+
+	&__link-date {
+		margin: 0;
+		padding: 0;
+
+		font-family: "Roboto-Regular";
+		font-size: 16px;
+		line-height: 20px;
+		color: $blue-font;
+		transition: 1s;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		font-family: "Barlow-SemiBold";
+		font-size: 26px;
+	}
+
+	&__text {
+		padding: 55px 60px 0;
+		margin: 0;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		line-height: 1.67;
+		white-space: pre-line;
+	}
+
+	&__svg {
+		width: 20px;
+		height: 20px;
+		margin: 10px;
+	}
+
+	&__link {
+		display: flex;
+		width: 100%;
+		height: 40px;
+
+		&:hover .networks__link-svg {
+			background: $main-font;
+		}
+	}
+
+	&__link-svg {
+		width: 40px;
+		margin-right: 20px;
+
+		border-radius: 2px;
+		transition: all 1s;
+	}
+}
+
+.youtube {
+	grid-column: 1/2;
+	grid-row: 1/4;
+
+	padding: 60px;
+
+	&__container {
+		display: flex;
+	}
+
+	&__link-svg {
+		background-color: $red;
+	}
+
+	& .networks__link:hover svg {
+		fill: $red;
+	}
+
+	& .networks__link:hover .networks__link-name,
+	& .networks__link:hover .networks__link-date {
+		color: $red;
+		filter: contrast(4);
+	}
+}
+
+.twitter {
+	grid-column: 2/3;
+	grid-row: 2/6;
+
+	&__img {
+		width: 100%;
+		max-height: 100px;
+
+		object-fit: cover;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	&__post-link {
+		padding: 0 60px;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		color: $green;
+	}
+
+	&__container {
+		display: flex;
+		margin: 25px 60px 60px;
+	}
+
+	&__link-svg {
+		background-color: $title-line;
+	}
+
+	& .networks__link:hover svg {
+		fill: $title-line;
+	}
+
+	& .networks__link:hover .networks__link-name,
+	& .networks__link:hover .networks__link-date {
+		color: $title-line;
+		filter: contrast(4);
+	}
+}
+
+.facebook {
+	grid-column: 1/2;
+	grid-row: 4/8;
+
+	&__img {
+		width: 100%;
+		height: 100px;
+		max-height: 100px;
+
+		object-fit: cover;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	&__post-link {
+		padding: 0 60px;
+
+		font-family: "Roboto-Regular";
+		font-size: 18px;
+		color: $green;
+	}
+
+	&__container {
+		display: flex;
+		margin: 25px 60px 60px;
+	}
+
+	&__link-svg {
+		background-color: $blue;
+	}
+
+	& .networks__link:hover svg {
+		fill: $blue;
+	}
+
+	& .networks__link:hover .networks__link-name,
+	& .networks__link:hover .networks__link-date {
+		color: $blue;
+		filter: contrast(4);
+	}
+}
+
+.insta {
+	grid-column: 2/3;
+	grid-row: 6/9;
+
+	padding: 60px;
+
+	&__container {
+		display: flex;
+	}
+
+	&__link-svg {
+		background: linear-gradient(198deg, rgba(1, 53, 148, 1) 10%, rgba(220, 3, 121, 1) 77%, rgba(219, 220, 3, 1) 100%);
+	}
+
+	& .networks__link:hover svg {
+		fill: $insta-color
+	}
+
+	& .networks__link:hover .networks__link-name,
+	& .networks__link:hover .networks__link-date {
+		color: $insta-color;
+		filter: contrast(4);
+	}
+}
