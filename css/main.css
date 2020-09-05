@@ -3854,6 +3854,9 @@ article {
             align-items: center;
     margin-bottom: 20px;
   }
+  .location {
+    margin-bottom: 15px;
+  }
   .wr-album {
     padding-top: 50px;
     padding-bottom: 50px;
