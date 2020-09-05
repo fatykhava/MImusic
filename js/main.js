@@ -2,6 +2,51 @@ window.onload = function () {
 	document.body.classList.add('loaded');
 }
 
+//плавный скролл header
+
+$(document).ready(function () {
+	$("#menu").on("click", "a", function (event) {
+		event.preventDefault();
+		let id = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({ scrollTop: top }, 1500);
+	});
+});
+
+//активное меню при скролле
+
+let sections = $('section')
+	, nav = $('nav')
+	, nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+	let cur_pos = $(this).scrollTop();
+
+	sections.each(function () {
+		let top = $(this).offset().top - nav_height,
+			bottom = top + $(this).outerHeight();
+
+		if (cur_pos >= top && cur_pos <= bottom) {
+			nav.find('a').removeClass('active');
+			sections.removeClass('active');
+
+			$(this).addClass('active');
+			nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+		}
+	});
+});
+
+nav.find('a').on('click', function () {
+	let $el = $(this)
+		, id = $el.attr('href');
+
+	$('html, body').animate({
+		scrollTop: $(id).offset().top - nav_height
+	}, 500);
+
+	return false;
+});
+
 // slider main-page
 
 $(document).ready(function () {
@@ -143,46 +188,30 @@ function showPost(target) {
 	}
 };
 
-//
+//аккордион + табы
 
-function Tabs() {
-	let bindAll = function () {
-		let menuElements = document.querySelectorAll('[data-tab]');
-		for (let i = 0; i < menuElements.length; i++) {
-			menuElements[i].addEventListener('click', change, false);
+let spoiler = document.querySelectorAll('.spoiler__item');
+let contentList = document.querySelectorAll('.content');
+
+for (let i = 0; i < spoiler.length; i++) {
+	spoiler[i].addEventListener('click', function () {
+		let target = spoiler[i];
+		target.classList.toggle('active');
+		for (let i = 0; i < spoiler.length; i++) {
+			if (target != spoiler[i]) {
+				spoiler[i].classList.remove('active');
+			};
 		}
-	}
-
-	let clear = function () {
-		let menuElements = document.querySelectorAll('[data-tab]');
-		for (let i = 0; i < menuElements.length; i++) {
-			menuElements[i].classList.remove('active');
-			let id = menuElements[i].getAttribute('data-tab');
-			document.getElementById(id).classList.remove('active');
+		let id = target.getAttribute('id').replace(/spoiler-/, 'content-');
+		let content = document.querySelector(`#${id}`);
+		for (let i = 0; i < contentList.length; i++) {
+			contentList[i].classList.remove('active');
 		}
-	}
-
-	let change = function (e) {
-		clear();
-		e.target.classList.add('active');
-		let id = e.currentTarget.getAttribute('data-tab');
-		document.getElementById(id).classList.add('active');
-	}
-
-	bindAll();
+		for (let i = 0; i < contentList.length; i++) {
+			if (content == contentList[i]) contentList[i].classList.add('active');
+		}
+	});
 }
-
-let connectTabs = new Tabs();
-
-//аккордион
-
-$(".spoiler__wr-title").click(function (event) {
-	if ($(".wr-blog__spoiler").hasClass("accordion")) {
-		$(".spoiler__wr-title").not($(this)).removeClass("active");
-		$(".spoiler__text").not($(this).next()).slideUp(700);
-	}
-	$(this).toggleClass("active").next().slideToggle(700);
-});
 
 // валидация формы
 let inputList = document.querySelectorAll('input');

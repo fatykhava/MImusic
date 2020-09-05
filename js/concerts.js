@@ -3,37 +3,19 @@ window.onload = function () {
 }
 
 //сортировка концертов
-let listSort = document.querySelector('.concert__btn-list');
-let btnSort = document.querySelectorAll('.concert__btn');
-let itemSort = document.querySelectorAll('.concert__item')
 
-listSort.addEventListener('click', function () {
-	let target = event.target;
+let hides = "all";
+$('.concert__btn-list button').click(function () {
+	let include = $(this).attr("id");
+	$("." + hides).slideUp();
+	setTimeout(function () {
+		$("." + include).slideDown()
+	}, 500)
+	hides = include;
+});
 
-	if (target.tagName != 'BUTTON') return;
-	showConcert(target);
-})
-
-function showConcert(target) {
-	let id = target.getAttribute('id').replace(/btn-/, '');
-	let region = document.querySelector(`.${id}`);
-
-	for (let i = 0; i < itemSort.length; i++) {
-		itemSort[i].classList.remove('disabled');
-	}
-
-	if (target.classList.contains('active')) return;
-
-	for (let i = 0; i < btnSort.length; i++) {
-		btnSort[i].classList.remove('active');
-	}
-	target.classList.add('active');
-
-	if (target.classList.contains('btn-world')) return;
-
-	for (let i = 0; i < itemSort.length; i++) {
-		if (region != itemSort[i]) {
-			itemSort[i].classList.add('disabled');
-		}
-	}
-};
+/* CLICK BUTTON PORTFOLIO */
+$(".concert__btn-list button").on("click", function () {
+	$(".concert__btn-list").find(".active").removeClass("active");
+	$(this).addClass("active");
+});
