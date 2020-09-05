@@ -3188,6 +3188,10 @@ article {
   .navigation__link:hover:before {
     display: none;
   }
+  .navigation__link.active {
+    color: #fff;
+    text-shadow: none;
+  }
   .burger__line {
     position: absolute;
     top: 50%;
