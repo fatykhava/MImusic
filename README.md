@@ -11,6 +11,6 @@ Getting Started
 Place the parent directory on the web server. 
 type in terminal:
 
-npm install -g gulp
-ncu
+npm install -g gulp  -->
+ncu  -->
 npm i
