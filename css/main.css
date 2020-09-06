@@ -2713,6 +2713,12 @@ article {
     top: 50%;
     left: 3%;
   }
+  .location__svg {
+    top: 3px;
+    left: 2px;
+    width: 11px;
+    height: 9px;
+  }
   .wr-album .title {
     margin-bottom: 25px;
   }
@@ -3326,10 +3332,6 @@ article {
   }
   .info {
     margin-right: 2vw;
-  }
-  .location__svg {
-    top: 2px;
-    left: 0px;
   }
   .wr-album__circle {
     bottom: 5%;
